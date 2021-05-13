@@ -1,5 +1,126 @@
-/* основной фоновый цвет E5E5E5 */
-/* основной свет текста 757575 */
-/* цвет оглавлений 212121 */
-/* текст фоновый доп F5F4FA */
-/* цвет кнопок  2196F3 */
+/* common css */
+/* основной цвет текста #757575 */
+/* вторичный цвет текста #212121 */
+/* белый #FFFFFF */
+/* белый с прозрачностью  rgba(255, 255, 255, 0.6) */
+/* цвет кнопок при наведении акцент #2196F3 */
+
+/* основной фоновый цвет #E5E5E5 */
+/* текст фоновый доп #F5F4FA */
+/* текст фоновый footer #2F303A */
+
+:root {
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --primary-whait-color: #ffffff;
+  --primary-black-color: #000000
+  --brand-color: ;
+}
+
+body {
+  font-family: 'Roboto';
+  background-color: var(--primary-whait-color);
+  color: var(--primary-text-color);
+}
+.list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+
+/* header */
+/* logo */
+.logo {
+  font-family: 'Raleway';
+  color: var(--primary-black-color);
+}
+.logo-text {
+  color: var(--accent-color);
+}
+/* site-nav */
+.site-nav .link {
+  color: var(--title-text-color);
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+.site-nav .link.current {
+  color: var(--accent-color);
+}
+/* contact */
+.contact .link {
+  color: var(--primary-text-color);
+}
+.contact .link:hover,
+.contact .link:focus {
+  color: var(--accent-color);
+}
+
+/* footer */
+
+.footer {
+  background-color: #2f303a;
+}
+.footer .link {
+  color: var(--primary-whait-color);
+}
+.footer .webmail,
+.footer .phone {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* button */
+.button {
+  color: var(--title-text-color);
+  background-color: var(--primary-whait-color);
+}
+.button.primary {
+  color: var(--primary-whait-color);
+  background-color: var(--accent-color);
+}
+.button.secondary {
+  color: var(--accent-color);
+  background-color: var(--primary-whait-color);
+}
+
+/* index css */
+/* main */
+/* hero */
+
+.hero {
+  background-color: #2f303a;
+}
+.hero-title {
+  color: var(--primary-whait-color);
+}
+
+/* section */
+
+.section-title {
+  color: var(--title-text-color);
+}
+/* features */
+
+.features .title {
+  color: var(--title-text-color);
+}
+
+/* specialty */
+
+/* team */
+
+.team {
+  background-color: #f5f4fa;
+}
+.team .title {
+  color: var(--title-text-color);
+}
+
+/* portfolio css */
+
+.portfolio .text {
+  color: var(--title-text-color);
+}
