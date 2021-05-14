@@ -205,6 +205,11 @@ body {
   color: var(--color-with-transparency);
 }
 
+.address .link:hover,
+.address .link:focus {
+  color: var(--accent-color);
+}
+
 /* portfolio css */
 
 /* main container portfolio */
