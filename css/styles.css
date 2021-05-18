@@ -30,6 +30,12 @@ body {
   color: var(--primary-text-color);
 }
 
+/* conteiner */
+
+/* .conteiner {
+  width: 1230px;
+} */
+
 .list {
   list-style: none;
 }
