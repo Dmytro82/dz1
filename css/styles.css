@@ -1,24 +1,14 @@
-/* common css */
-/* основной цвет текста #757575 */
-/* вторичный цвет текста #212121 */
-/* белый #FFFFFF */
-/* белый с прозрачностью  rgba(255, 255, 255, 0.6) */
-/* цвет кнопок при наведении акцент #2196F3 */
-/* текст фоновый доп #F5F4FA */
-/* фоновый footer + hero #2F303A */
-/* черный #000000 */
-/* color liane header ECECEC  */
-/* color liane card portfolio EEEEEE */
-
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
   --accent-color: #2196f3;
+  --accent-color-button: #1f59ec;
   --primary-whait-color: #ffffff;
   --primary-black-color: #000000;
   --color-with-transparency: rgba(255, 255, 255, 0.6);
   --color-section-background: #2f303a;
   --color-section-background2: #f5f4fa;
+  --gradient-color-hero: rgba(47, 48, 58, 0.4);
   --color-liane-header: #ececec;
   --color-liane-card: #eeeeee;
   --primary-btn-shadow-: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -58,6 +48,7 @@ img {
   display: inline-block;
   text-decoration: none;
   color: inherit;
+  outline: 0px;
 }
 
 /* container */
@@ -67,17 +58,16 @@ img {
   margin-left: auto;
   width: 1200px;
   padding: 94px 15px;
-  /* padding-top: 94px;
-  padding-right: 15px;
-  padding-bottom: 94px;
-  padding-left: 15px; */
 }
 
 /* скрывает ненужные title */
 
-.features .section-title,
-.main-portfolio .section-title {
-  display: none;
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 /* section title */
@@ -107,6 +97,7 @@ img {
   background-color: var(--primary-whait-color);
   color: var(--title-text-color);
   border-radius: 4px;
+  outline: 0px;
 }
 
 .button.primary {
@@ -115,8 +106,8 @@ img {
 }
 .button.primary:hover,
 .button.primary:focus {
-  background-color: var(--primary-whait-color);
-  color: var(--accent-color);
+  background-color: var(--accent-color-button);
+  color: var(--primary-whait-color);
   box-shadow: var(--primary-shadow);
 }
 
@@ -133,11 +124,15 @@ img {
 
 /* header */
 
+.header {
+  border-bottom: 1px solid var(--color-liane-header);
+}
+
 .header .container {
   display: flex;
   padding-top: 0;
   padding-bottom: 0;
-  border-bottom: 1px solid var(--color-liane-header);
+
   align-items: center;
 }
 
@@ -162,15 +157,7 @@ img {
   display: flex;
   margin-left: 93px;
 }
-/* .site-nav .item {
-  margin-right: 50px;
-}
-.site-nav .item:last-child {
-  margin-right: 0px;
-} */
-/* .site-nav .item:not(:last-child) {
-  margin-right: 50px;
-} */
+
 .site-nav .item + .item {
   margin-left: 50px;
 }
@@ -230,7 +217,18 @@ img {
 /* studio hero */
 
 .hero {
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--color-section-background);
+  background-image: linear-gradient(
+      to right,
+      var(--gradient-color-hero),
+      var(--gradient-color-hero)
+    ),
+    url(../images/index-img/backgroundHero.jpg);
 }
 
 .hero .container {
@@ -269,7 +267,6 @@ img {
 .features .item + .item {
   margin-left: 30px;
 }
-
 .features .title {
   margin-bottom: 10px;
   font-size: 14px;
@@ -283,6 +280,34 @@ img {
 .features .text {
   font-size: 14px;
   line-height: 1.71;
+}
+
+.features .item::before {
+  display: block;
+  content: '';
+  height: 120px;
+  margin-bottom: 30px;
+
+  background-color: var(--color-section-background2);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/svg/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/svg/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/svg/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/svg/astronaut.svg);
 }
 
 /* studio specialty */
@@ -455,3 +480,5 @@ img {
   font-size: 16px;
   line-height: 1.87;
 }
+
+/* el jhj*/
