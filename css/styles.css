@@ -8,7 +8,6 @@
   --color-with-transparency: rgba(255, 255, 255, 0.6);
   --color-section-background: #2f303a;
   --color-section-background2: #f5f4fa;
-  --gradient-color-hero: rgba(47, 48, 58, 0.4);
   --color-liane-header: #ececec;
   --color-liane-card: #eeeeee;
   --primary-btn-shadow-: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -217,18 +216,8 @@ img {
 /* studio hero */
 
 .hero {
-  max-width: 1600px;
-  min-height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-
   background-color: var(--color-section-background);
-  background-image: linear-gradient(
-      to right,
-      var(--gradient-color-hero),
-      var(--gradient-color-hero)
-    ),
-    url(../images/index-img/backgroundHero.jpg);
+  background-image: url(../images/backgroundHero.jpg);
 }
 
 .hero .container {
@@ -267,6 +256,7 @@ img {
 .features .item + .item {
   margin-left: 30px;
 }
+
 .features .title {
   margin-bottom: 10px;
   font-size: 14px;
@@ -281,7 +271,6 @@ img {
   font-size: 14px;
   line-height: 1.71;
 }
-
 .features .item::before {
   display: block;
   content: '';
@@ -309,7 +298,6 @@ img {
 .icon-astronaut::before {
   background-image: url(../images/svg/astronaut.svg);
 }
-
 /* studio specialty */
 
 .specialty .list {
@@ -480,5 +468,3 @@ img {
   font-size: 16px;
   line-height: 1.87;
 }
-
-/* el jhj*/
