@@ -370,6 +370,7 @@
             </ul>
           </address>
         </div>
+
         <div class="social-network">
           <h3 class="social-title title">ПРИСОЕДИНЯЙТЕСЬ</h3>
           <ul class="social-list list">
@@ -403,7 +404,43 @@
             </li>
           </ul>
         </div>
+
+        <div class="subscription-container">
+          <h3 class="subscription-title title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
+          <form class="subscription-form js-speaker-form">
+            <label class="subscription-label" for="subscription-email"></label>
+            <input
+              class="subscription-input input"
+              type="email"
+              id="subscription-email"
+              name="subscription-email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="button button-subscription primary">
+              Отправить
+              <svg class="subscription-icon">
+                <use href="./images/svg/sprite.svg#icon-subscription"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+    <!-- проверка отправки модалки -->
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
