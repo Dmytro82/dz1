@@ -453,19 +453,144 @@
             </li>
           </ul>
         </div>
+        <div class="subscription-container">
+          <h3 class="subscription-title title">ПОДПИШИТЕСЬ НА РАССЫЛКУ</h3>
+          <form class="subscription-form js-speaker-form">
+            <label
+              class="subscription-label label"
+              for="subscription-email"
+            ></label>
+            <input
+              class="subscription-input input"
+              type="email"
+              id="subscription-email"
+              name="subscription-email"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="button button-subscription primary">
+              Отправить
+              <svg class="subscription-icon">
+                <use href="./images/svg/sprite.svg#icon-subscription"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- modal window  -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
+        <!-- кнопка закрытия модалки -->
         <button type="button" class="button-close button" data-modal-close>
-          <svg class="icon-close icon">
+          <svg class="icon-close icon" width="11px" height="11px">
             <use href="./images/svg/sprite.svg#icon-close"></use>
           </svg>
         </button>
+        <div class="form">
+          <h2 class="modal-title title">
+            Оставьте свои данные, мы вам перезвоним
+          </h2>
+          <form class="js-speaker-form" autocomplete="on">
+            <!-- группа для ввода инфо -->
+            <div class="form-fild">
+              <label for="user-name" class="form-label label">Имя</label>
+              <div class="form-auxiliary">
+                <input
+                  type="text"
+                  class="form-input input"
+                  name="user-name"
+                  id="user-name"
+                  required
+                />
+                <svg class="form-icon icon">
+                  <use href="./images/svg/sprite.svg#icon-personBlack"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form-fild">
+              <label for="user-tel" class="form-label label">Телефон </label>
+              <div class="form-auxiliary">
+                <input
+                  type="tel"
+                  class="form-input input"
+                  name="user-tel"
+                  id="user-tel"
+                />
+                <svg class="form-icon icon">
+                  <use href="./images/svg/sprite.svg#icon-phoneBlack"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form-fild">
+              <label for="user-email" class="form-label label">Почта</label>
+              <div class="form-auxiliary">
+                <input
+                  type="email"
+                  class="form-input input"
+                  name="user-email"
+                  id="user-email"
+                />
+                <svg class="form-icon icon">
+                  <use href="./images/svg/sprite.svg#icon-emailBlack"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="form-fild form-textarea">
+              <label for="textarea" class="form-label label">Комментарий</label>
+              <textarea
+                name="comment"
+                class="input input-textarea"
+                id="textarea"
+                placeholder="Введите текст"
+              ></textarea>
+            </div>
+
+            <!-- чекбокс -->
+
+            <label class="checkbox-label label"
+              ><input
+                type="checkbox"
+                name="conditions"
+                class="checkbox-input visually-hidden"
+                value="conditions"
+                required
+              />
+              <svg class="checkbox-icon icon">
+                <use href="./images/svg/sprite.svg#icon-iconCheck"></use>
+              </svg>
+              Соглашаюсь с рассылкой и принимаю
+              <a class="checkbox-link" href="#">Условия договора</a>
+            </label>
+
+            <!-- кнопка отправки модалки -->
+
+            <button type="submit" class="button button-form primary">
+              Отправить
+            </button>
+          </form>
+        </div>
       </div>
     </div>
+    <!-- проверка отправки модалки -->
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
 
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+    <!-- подключение модалки -->
     <script src="./js/modal.js"></script>
   </body>
 </html>
