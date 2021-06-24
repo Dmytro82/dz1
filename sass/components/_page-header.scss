@@ -1,0 +1,11 @@
+.page-header {
+  border-bottom: 1px solid var(--color-liane-header);
+}
+
+.page-header__container {
+  display: flex;
+  align-items: center;
+
+  padding-top: 0;
+  padding-bottom: 0;
+}

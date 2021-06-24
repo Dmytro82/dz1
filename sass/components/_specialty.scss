@@ -1,0 +1,30 @@
+.specialty__container {
+  padding-top: 0;
+  text-align: center;
+}
+
+.specialty__list {
+  position: relative;
+  display: flex;
+}
+
+.specialty__item + .specialty__item {
+  margin-left: 30px;
+}
+
+.specialty__title {
+  margin-bottom: 50px;
+}
+
+.specialty__subtitle {
+  position: absolute;
+  bottom: 0px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  min-width: 370px;
+
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--primary-whait-color);
+  background-color: var(--bg-element-specialty);
+}

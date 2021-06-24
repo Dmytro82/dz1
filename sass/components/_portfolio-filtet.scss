@@ -1,0 +1,14 @@
+.filtet {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.filtet__button {
+  min-width: 73px;
+}
+
+.filtet__item + .filtet__item {
+  margin-left: 8px;
+}

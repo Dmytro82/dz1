@@ -1,0 +1,13 @@
+// font-size: 16px;
+//   line-height: 1.87;
+@mixin font-line($fl, $lh) {
+  font-size: $fl;
+  line-height: $lh;
+}
+// @include font-line($fl, $lh);
+
+@mixin dis-al($dis, $al) {
+  display: $dis;
+  align-items: $al;
+}
+// @include dis-al($dis, $al);
