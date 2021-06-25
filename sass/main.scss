@@ -1,7 +1,6 @@
 @import './utils/variables';
 @import './utils/reset';
 @import './utils/visually-hidden';
-@import './utils/placeholder';
 @import './utils/mixin';
 
 @import './base/body';
@@ -25,3 +24,5 @@
 @import './components/portfolio-filtet';
 @import './components/portfolio-card';
 @import './components/modal';
+@import './components/form';
+@import './components/checkbox';

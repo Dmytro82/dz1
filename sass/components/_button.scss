@@ -1,9 +1,8 @@
 .button {
   @include dis-al(inline-flex, center);
-  @include font-line(16px, 1.62);
+  @include font-weight(500, 16px, 1.62);
   padding: 10px 32px;
   border: 0;
-  font-weight: 500;
   background-color: var(--primary-whait-color);
   color: var(--title-text-color);
   border-radius: 4px;

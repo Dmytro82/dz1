@@ -1,13 +1,33 @@
-// font-size: 16px;
-//   line-height: 1.87;
-@mixin font-line($fl, $lh) {
-  font-size: $fl;
-  line-height: $lh;
-}
-// @include font-line($fl, $lh);
-
 @mixin dis-al($dis, $al) {
   display: $dis;
   align-items: $al;
 }
-// @include dis-al($dis, $al);
+//
+
+@mixin font-line($fs, $lh) {
+  font-size: $fs;
+  line-height: $lh;
+}
+// @include font-line($fs, $lh);
+
+@mixin font($fw, $fs, $lh, $ls) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+// @include font($fw, $fs, $lh, $ls);
+
+@mixin font-letter($fs, $lh, $ls) {
+  font-size: $fs;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+// @include font-letter($fs, $lh, $ls);
+
+@mixin font-weight($fw, $fs, $lh) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+}
+//
